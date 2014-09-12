@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- This file is part of sale_asterisk module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<form string="Call Phone">
+    <label name="contact_mechanisms"/>
+    <field name="contact_mechanisms"  widget="selection"/>
+</form>
