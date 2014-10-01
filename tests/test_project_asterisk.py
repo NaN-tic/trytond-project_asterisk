@@ -9,11 +9,11 @@ class TestCase(unittest.TestCase):
     'Test module'
 
     def setUp(self):
-        trytond.tests.test_tryton.install_module('<module>')
+        trytond.tests.test_tryton.install_module('project_asterisk')
 
     def test0005views(self):
         'Test views'
-        test_view('<module>')
+        test_view('project_asterisk')
 
     def test0006depends(self):
         'Test depends'
