@@ -60,8 +60,8 @@ class WorkAsterisk(Wizard):
             work = Work(work)
             mechanisms = []
             for activity in work.activities:
-                if activity.main_contact:
-                    mechanisms.extend(self.get_mechanims(activity.main_contact))
+                if activity.contacts:
+                    mechanisms.extend(self.get_mechanims(activity.contacts[0]))
                 for contact in activity.contacts:
                     mechanisms.extend(self.get_mechanims(contact))
         mechanisms = list(set(mechanisms))
