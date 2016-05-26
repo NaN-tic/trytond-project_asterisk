@@ -1,0 +1,39 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:project.work.asterisk.result,allowed_contacts_mechanisms:"
+msgid "Allowed Contacts Mechanisms"
+msgstr "Medios de contacto disponibles"
+
+msgctxt "field:project.work.asterisk.result,contact_mechanisms:"
+msgid "Contact Mechanisms"
+msgstr "Medios de contacto"
+
+msgctxt "field:project.work.asterisk.result,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:project.work.asterisk.result,phone:"
+msgid "Phone"
+msgstr "Teléfono"
+
+msgctxt "model:ir.action,name:wizard_project_work_asterisk"
+msgid "Call Phone"
+msgstr "Llamada telefónica"
+
+msgctxt "model:project.work.asterisk.result,name:"
+msgid "Work Asterisk Result"
+msgstr "Resultado trabajos Asterisk"
+
+msgctxt "view:project.work.asterisk.result:"
+msgid "Call Phone"
+msgstr "Llamada telefónica"
+
+msgctxt "wizard_button:project.work.asterisk,start,dial:"
+msgid "Dial"
+msgstr "Marcar"
+
+msgctxt "wizard_button:project.work.asterisk,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"

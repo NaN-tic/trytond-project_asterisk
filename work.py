@@ -18,7 +18,7 @@ class WorkAsteriskResult(ModelView):
     allowed_contacts_mechanisms = fields.Function(fields.One2Many(
             'party.contact_mechanism', None, 'Allowed Contacts Mechanisms'),
         'on_change_with_allowed_contacts_mechanisms')
-    contact_mechanisms = fields.Many2One('party.contact_mechanism', 'party',
+    contact_mechanisms = fields.Many2One('party.contact_mechanism',
         'Contact Mechanisms',
         domain=[
             ('id', 'in', Eval('allowed_contacts_mechanisms', [])),
