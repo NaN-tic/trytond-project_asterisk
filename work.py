@@ -4,7 +4,6 @@
 from trytond.model import ModelView, fields
 from trytond.pool import Pool
 from trytond.transaction import Transaction
-from trytond.pyson import Eval
 from trytond.wizard import Wizard, StateView, StateTransition, Button
 
 __all__ = ['WorkAsteriskResult', 'WorkAsterisk']
@@ -15,15 +14,8 @@ class WorkAsteriskResult(ModelView):
     __name__ = 'project.work.asterisk.result'
 
     phone = fields.Selection('get_phones', 'Phone', required=True)
-    allowed_contacts_mechanisms = fields.Function(fields.One2Many(
-            'party.contact_mechanism', None, 'Allowed Contacts Mechanisms'),
-        'on_change_with_allowed_contacts_mechanisms')
     contact_mechanisms = fields.Many2One('party.contact_mechanism',
-        'Contact Mechanisms',
-        domain=[
-            ('id', 'in', Eval('allowed_contacts_mechanisms', [])),
-            ],
-        depends=['allowed_contacts_mechanisms'])
+        'Contact Mechanisms')
 
 
 class WorkAsterisk(Wizard):
@@ -66,7 +58,6 @@ class WorkAsterisk(Wizard):
                     mechanisms.extend(self.get_mechanims(contact))
         mechanisms = list(set(mechanisms))
         return {
-            'allowed_contacts_mechanisms': [m.id for m in mechanisms],
             'contact_mechanisms': mechanisms and mechanisms[0].id or None
             }
 
